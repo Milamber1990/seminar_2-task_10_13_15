@@ -1,11 +1,19 @@
 ﻿Console.Write("Введите число ");
 int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Ваше число = {num}");
 
-int num1 = num / 100;
-Console.WriteLine(num1);
 
-if(num1 == 0)
+int num6(int num)
+{
+    while (num > 999)
+    {
+        num /= 10;
+    }
+    return num % 10;
+}
+
+
+if (num < 100)
 Console.Write("Третьей цифры нет");
-
-int num2 = num % 100;
-Console.Write(num2);
+else
+Console.WriteLine($"Третье число = {num6(num)}");
